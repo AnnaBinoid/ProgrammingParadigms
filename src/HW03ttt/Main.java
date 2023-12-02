@@ -42,8 +42,15 @@ public class Main {
 //        String[][] board = createBoard();
 //        board[0][0] = CELL_STATE_X;
 //        inputCellCoordinates(board);
-        while (true) {
+
+        System.out.println("Do you want to play TicTacToe? (y/n) ");
+        String s1 = scanner.nextLine();
+
+        while (!s1.equals("n"))
+        {
             startGameRound();
+            System.out.println("Do you want to play TicTacToe another time? (y/n) ");
+            s1 = scanner.nextLine();
         }
     }
 
