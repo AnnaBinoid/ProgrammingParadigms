@@ -1,21 +1,9 @@
 package HW03ttt;
-// Один
-// ����� ������ ����� ������
-// ����� ������ ������ �
-// ��� ������ ������ �
-// ��� ������ �������� ��������� ������ ������
-// ��� ��� (������ �����������)
-// ���������� ����� � ������� ���������� � 0
-
-// 1. ������� ���������� ���������
-// 2. ������� �������� � �������
-// 3. ����� ��� ���������� ��������� ��������� � ��������� (�������, �����, �����)
-// 4. ������� ���������� - ��� ��� ����������. ����� createBoard -> inputCellCoordinates ->
-//     -> makePlayerTurn -> startGameLoop -> getRandomEmptyCellCoordinates ->
-//     -> makeBotTurn -> checkGameState
-// 5. ����� ��������� ���������� ���������� (��. �������), ����� - ��� (board). ���� ��
-//    ������ ��������� ������� - ������� ������ ���� � ��� ��. ����� ������ ��� ���������
-//    ������ � ������ ��� �����.
+// Делала по гайду
+// Второй соперник - бот, ставит нолик в рандомную пустую клетку
+// Игрок ходит первым по умолчанию
+// Игрок по умолчанию играет крестиками
+// Подход процедурный - не ООП
 
 import java.util.ArrayList;
 import java.util.Objects;
@@ -23,7 +11,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
-    private static int TABLE_SIZE = 3; // �������� ������� ����� _ - ����� ���������� ���������� ���������
+    private static int TABLE_SIZE = 3;
 
     private static String CELL_STATE_EMPTY = " ";
     private static String CELL_STATE_X = "x";
@@ -59,7 +47,7 @@ public class Main {
         System.out.println("Let's start the game!");
         printBoard(createBoard());
 
-        String[][] board = createBoard(); // ������� ����, �������� ��� � board
+        String[][] board = createBoard();
         startGameloop(board);
         // startGameLoop
 
@@ -99,12 +87,6 @@ public class Main {
             }
 
         } while (true);
-
-
-        // while (gameNotOver)
-        // playerTurn (������ �� ������, �� ������� �� ������� ���� � ��)
-        // botTurn
-        // checkGameState (�_WIN, O_WIN, DRAW, GAME_NOT_OVER_
     }
 
     public static void makePlayerTurn(String[][] board) {
@@ -113,10 +95,8 @@ public class Main {
         System.out.println("Player made his move!");
     }
 
-    public static int[] inputCellCoordinates(String[][] board){ // ����� �������, ������� ����� ��������� 2 ���������� ����� ������
+    public static int[] inputCellCoordinates(String[][] board){
         System.out.println("Enter coordinates from 0 to 2 separated by a space: ");
-
-        // ��������� - �� ��������� �� ������� ������� � ������������ ����
 
         do {
             String[] input = scanner.nextLine().split(" ");
