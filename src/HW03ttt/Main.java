@@ -39,6 +39,7 @@ public class Main {
 
 
     public static void main(String[] args) {
+
 //        String[][] board = createBoard();
 //        board[0][0] = CELL_STATE_X;
 //        inputCellCoordinates(board);
