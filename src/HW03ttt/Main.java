@@ -44,6 +44,7 @@ public class Main {
 //        board[0][0] = CELL_STATE_X;
 //        inputCellCoordinates(board);
 
+
         System.out.println("Do you want to play TicTacToe? (y/n) ");
         String s1 = scanner.nextLine();
 
